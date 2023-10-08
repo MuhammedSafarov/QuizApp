@@ -74,13 +74,14 @@ class MainQuiz extends React.Component {
       return (
         <div className="result">
           <div className="show-result">
-            Your correct answers are <b className="score">{this.state.score}</b>{" "}
+            Your have <b className="score">{this.state.score}</b> correct
+            answers{" "}
           </div>
-          <div>
-            The correct answer's for the questions was :
+          <div className="result-box">
+            <p>The correct answer's for the questions was :</p>
             <ul>
               {quizData.map((item, index) => (
-                <li className="ui floating message options" key={index}>
+                <li className="ui floating-message options" key={index}>
                   {item.answer}
                 </li>
               ))}
@@ -91,10 +92,7 @@ class MainQuiz extends React.Component {
     } else {
       return (
         <div className="quiz-box">
-          <h4>{this.state.questions} </h4>
-          <span>{`Questions ${currentQuestion}  out of ${
-            quizData.length - 1
-          } remaining `}</span>
+          <h2>{this.state.questions} </h2>
           {options.map((option) => (
             <p
               key={option.id}
@@ -108,6 +106,9 @@ class MainQuiz extends React.Component {
           ))}
           {currentQuestion < quizData.length - 1 && (
             <div className="btn-div">
+              <span>{`${currentQuestion + 1} of ${
+                quizData.length
+              } questions `}</span>
               <button
                 className="ui inverted-button"
                 disabled={this.state.disabled}
@@ -119,6 +120,9 @@ class MainQuiz extends React.Component {
           )}
           {currentQuestion === quizData.length - 1 && (
             <div className="btn-div">
+              <span>{`${currentQuestion + 1} of ${
+                quizData.length
+              } questions `}</span>
               <button
                 className="ui inverted-button"
                 onClick={this.finishHandler}

@@ -8,9 +8,10 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 60%;
+  width: 45%;
+  height: 24rem;
   margin: 0 auto;
-  margin-top: 18%;
+  margin-top: 10%;
   padding: 15px;
   background-color: white;
   border-radius: 10px;
@@ -36,7 +37,8 @@
 .header h3 {
   margin-left: 25px;
 }
-.quiz-box {
+.quiz-box,
+.result {
   width: 90%;
 }
 .quiz-box p {
@@ -45,8 +47,9 @@
   background-color: rgb(203, 222, 241);
   border: 1px solid dodgerblue;
 }
-.result {
-  margin-top: 20px;
+.quiz-box p:hover {
+  background-color: green;
+  color: white;
 }
 .options {
   cursor: pointer;
@@ -60,6 +63,11 @@
 ul {
   list-style-type: none;
 }
+.btn-div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 .inverted-button {
   padding: 8px;
   margin: 10px;
@@ -68,4 +76,17 @@ ul {
   border: none;
   color: white;
   background-color: dodgerblue;
+}
+.inverted-button:hover {
+  cursor: pointer;
+  background-color: green;
+}
+.result .show-result {
+  margin: 10px;
+}
+.result .floating-message {
+  margin: 10px;
+  margin: 15px;
+  border-radius: 10px;
+  border: 1px solid dodgerblue;
 }
