@@ -1,10 +1,19 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 .App {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 60%;
+  margin: 0 auto;
+  margin-top: 18%;
+  padding: 15px;
+  background-color: white;
+  border-radius: 10px;
 }
 
 .App-header {
@@ -17,4 +26,46 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
+.header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  margin: 15px;
+}
+.header h3 {
+  margin-left: 25px;
+}
+.quiz-box {
+  width: 90%;
+}
+.quiz-box p {
+  margin: 15px;
+  border-radius: 10px;
+  background-color: rgb(203, 222, 241);
+  border: 1px solid dodgerblue;
+}
+.result {
+  margin-top: 20px;
+}
+.options {
+  cursor: pointer;
+  border: 2px solid black;
+  padding: 10px;
+}
+.selected {
+  background: rgb(108, 178, 248) !important;
+  color: white;
+}
+ul {
+  list-style-type: none;
+}
+.inverted-button {
+  padding: 8px;
+  margin: 10px;
+  width: 5rem;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  background-color: dodgerblue;
+}
